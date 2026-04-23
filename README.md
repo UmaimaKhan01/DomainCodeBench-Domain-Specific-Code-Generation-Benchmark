@@ -1,25 +1,5 @@
-HF LINK: https://huggingface.co/datasets/umaimakhan01/domain-code-bench
----
-license: apache-2.0
-task_categories:
-  - text-generation
-language:
-  - en
-tags:
-  - code-generation
-  - benchmark
-  - evaluation
-  - healthcare
-  - finance
-  - molecular-simulation
-  - legal
-  - domain-specific
-pretty_name: "Domain-Specific Code Generation Benchmark (DomainCodeBench)"
-size_categories:
-  - n<1K
----
-
 # 🏆 DomainCodeBench: Domain-Specific Code Generation Benchmark
+HF LINK: https://huggingface.co/datasets/umaimakhan01/domain-code-bench
 
 A comprehensive evaluation framework for code generation models across **4 specialized domains**: Healthcare Systems, Financial Algorithms, Molecular Simulation, and Legal Document Processing.
 
