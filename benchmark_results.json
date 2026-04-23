@@ -1,0 +1,1746 @@
+{
+  "metadata": {
+    "benchmark_name": "Domain-Specific Code Generation Benchmark",
+    "version": "1.0",
+    "date": "2026-04-23T04:56:48.032487+00:00",
+    "n_tasks": 20,
+    "n_models": 4,
+    "domains": [
+      "healthcare",
+      "finance",
+      "molecular_sim",
+      "legal"
+    ],
+    "evaluation_method": "automated_test_execution_and_static_analysis",
+    "scoring": {
+      "functional_correctness": 0.4,
+      "compliance": 0.2,
+      "domain_coverage": 0.15,
+      "code_quality": 0.15,
+      "reference_similarity": 0.1
+    }
+  },
+  "leaderboard": {
+    "Qwen2.5-Coder-7B": {
+      "overall": {
+        "pass_rate": 1.0,
+        "avg_composite_score": 0.8977,
+        "avg_domain_coverage": 0.807,
+        "avg_code_quality": 0.525,
+        "avg_compliance": 0.99,
+        "n_tasks": 20
+      },
+      "by_domain": {
+        "healthcare": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.8979,
+          "avg_domain_coverage": 0.819,
+          "avg_compliance": 1.0,
+          "n_tasks": 5
+        },
+        "finance": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.9098,
+          "avg_domain_coverage": 0.779,
+          "avg_compliance": 1.0,
+          "n_tasks": 5
+        },
+        "molecular_sim": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.8934,
+          "avg_domain_coverage": 0.846,
+          "avg_compliance": 0.96,
+          "n_tasks": 5
+        },
+        "legal": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.8898,
+          "avg_domain_coverage": 0.786,
+          "avg_compliance": 1.0,
+          "n_tasks": 5
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.94,
+          "n_tasks": 2
+        },
+        "medium": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.9001,
+          "n_tasks": 10
+        },
+        "hard": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.8842,
+          "n_tasks": 8
+        }
+      }
+    },
+    "Qwen2.5-Coder-3B": {
+      "overall": {
+        "pass_rate": 0.95,
+        "avg_composite_score": 0.8746,
+        "avg_domain_coverage": 0.807,
+        "avg_code_quality": 0.525,
+        "avg_compliance": 0.978,
+        "n_tasks": 20
+      },
+      "by_domain": {
+        "healthcare": {
+          "pass_rate": 0.8,
+          "avg_composite": 0.8064,
+          "avg_domain_coverage": 0.819,
+          "avg_compliance": 0.95,
+          "n_tasks": 5
+        },
+        "finance": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.9098,
+          "avg_domain_coverage": 0.779,
+          "avg_compliance": 1.0,
+          "n_tasks": 5
+        },
+        "molecular_sim": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.8925,
+          "avg_domain_coverage": 0.846,
+          "avg_compliance": 0.96,
+          "n_tasks": 5
+        },
+        "legal": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.8897,
+          "avg_domain_coverage": 0.786,
+          "avg_compliance": 1.0,
+          "n_tasks": 5
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.94,
+          "n_tasks": 2
+        },
+        "medium": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.8995,
+          "n_tasks": 10
+        },
+        "hard": {
+          "pass_rate": 0.875,
+          "avg_composite": 0.8271,
+          "n_tasks": 8
+        }
+      }
+    },
+    "CodeLlama-7B": {
+      "overall": {
+        "pass_rate": 0.7,
+        "avg_composite_score": 0.7384,
+        "avg_domain_coverage": 0.777,
+        "avg_code_quality": 0.52,
+        "avg_compliance": 0.885,
+        "n_tasks": 20
+      },
+      "by_domain": {
+        "healthcare": {
+          "pass_rate": 0.6,
+          "avg_composite": 0.6801,
+          "avg_domain_coverage": 0.786,
+          "avg_compliance": 0.85,
+          "n_tasks": 5
+        },
+        "finance": {
+          "pass_rate": 0.8,
+          "avg_composite": 0.7899,
+          "avg_domain_coverage": 0.721,
+          "avg_compliance": 0.96,
+          "n_tasks": 5
+        },
+        "molecular_sim": {
+          "pass_rate": 0.8,
+          "avg_composite": 0.7886,
+          "avg_domain_coverage": 0.874,
+          "avg_compliance": 0.83,
+          "n_tasks": 5
+        },
+        "legal": {
+          "pass_rate": 0.6,
+          "avg_composite": 0.6949,
+          "avg_domain_coverage": 0.728,
+          "avg_compliance": 0.9,
+          "n_tasks": 5
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.94,
+          "n_tasks": 2
+        },
+        "medium": {
+          "pass_rate": 0.8,
+          "avg_composite": 0.7963,
+          "n_tasks": 10
+        },
+        "hard": {
+          "pass_rate": 0.5,
+          "avg_composite": 0.6156,
+          "n_tasks": 8
+        }
+      }
+    },
+    "StarCoder2-15B": {
+      "overall": {
+        "pass_rate": 1.0,
+        "avg_composite_score": 0.8896,
+        "avg_domain_coverage": 0.807,
+        "avg_code_quality": 0.515,
+        "avg_compliance": 0.96,
+        "n_tasks": 20
+      },
+      "by_domain": {
+        "healthcare": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.8979,
+          "avg_domain_coverage": 0.819,
+          "avg_compliance": 1.0,
+          "n_tasks": 5
+        },
+        "finance": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.8893,
+          "avg_domain_coverage": 0.75,
+          "avg_compliance": 0.96,
+          "n_tasks": 5
+        },
+        "molecular_sim": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.8815,
+          "avg_domain_coverage": 0.874,
+          "avg_compliance": 0.88,
+          "n_tasks": 5
+        },
+        "legal": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.8896,
+          "avg_domain_coverage": 0.786,
+          "avg_compliance": 1.0,
+          "n_tasks": 5
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.94,
+          "n_tasks": 2
+        },
+        "medium": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.8899,
+          "n_tasks": 10
+        },
+        "hard": {
+          "pass_rate": 1.0,
+          "avg_composite": 0.8766,
+          "n_tasks": 8
+        }
+      }
+    }
+  },
+  "detailed_results": {
+    "Qwen2.5-Coder-7B": [
+      {
+        "task_id": "health_001",
+        "domain": "healthcare",
+        "subdomain": "FHIR_interoperability",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.925,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "health_002",
+        "domain": "healthcare",
+        "subdomain": "clinical_calculations",
+        "difficulty": "easy",
+        "functional_passed": true,
+        "composite_score": 0.955,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "health_003",
+        "domain": "healthcare",
+        "subdomain": "medication_safety",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.895,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.3,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "health_004",
+        "domain": "healthcare",
+        "subdomain": "ehr_data_processing",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.8393,
+        "domain_coverage": 0.429,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "health_005",
+        "domain": "healthcare",
+        "subdomain": "hipaa_compliance",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.875,
+        "domain_coverage": 0.667,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_001",
+        "domain": "finance",
+        "subdomain": "risk_management",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.8693,
+        "domain_coverage": 0.429,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_002",
+        "domain": "finance",
+        "subdomain": "portfolio_optimization",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.9335,
+        "domain_coverage": 0.857,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_003",
+        "domain": "finance",
+        "subdomain": "pricing_models",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.9175,
+        "domain_coverage": 0.75,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_004",
+        "domain": "finance",
+        "subdomain": "transaction_processing",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.955,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_005",
+        "domain": "finance",
+        "subdomain": "monte_carlo_simulation",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8736,
+        "domain_coverage": 0.857,
+        "code_quality_score": 0.3,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_001",
+        "domain": "molecular_sim",
+        "subdomain": "molecular_representation",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.885,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.5,
+        "compliance_score": 0.8,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_002",
+        "domain": "molecular_sim",
+        "subdomain": "molecular_properties",
+        "difficulty": "easy",
+        "functional_passed": true,
+        "composite_score": 0.925,
+        "domain_coverage": 0.8,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_003",
+        "domain": "molecular_sim",
+        "subdomain": "force_field_computation",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8821,
+        "domain_coverage": 0.714,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_004",
+        "domain": "molecular_sim",
+        "subdomain": "drug_likeness",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.925,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_005",
+        "domain": "molecular_sim",
+        "subdomain": "energy_minimization",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8501,
+        "domain_coverage": 0.714,
+        "code_quality_score": 0.3,
+        "compliance_score": 1.0,
+        "similarity_score": 0.98,
+        "error": null
+      },
+      {
+        "task_id": "legal_001",
+        "domain": "legal",
+        "subdomain": "contract_analysis",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.94,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.6,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "legal_002",
+        "domain": "legal",
+        "subdomain": "citation_processing",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.91,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.4,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "legal_003",
+        "domain": "legal",
+        "subdomain": "compliance_checking",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.9035,
+        "domain_coverage": 0.857,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "legal_004",
+        "domain": "legal",
+        "subdomain": "document_redaction",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.835,
+        "domain_coverage": 0.5,
+        "code_quality_score": 0.4,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "legal_005",
+        "domain": "legal",
+        "subdomain": "risk_assessment",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8607,
+        "domain_coverage": 0.571,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      }
+    ],
+    "Qwen2.5-Coder-3B": [
+      {
+        "task_id": "health_001",
+        "domain": "healthcare",
+        "subdomain": "FHIR_interoperability",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.925,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "health_002",
+        "domain": "healthcare",
+        "subdomain": "clinical_calculations",
+        "difficulty": "easy",
+        "functional_passed": true,
+        "composite_score": 0.955,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "health_003",
+        "domain": "healthcare",
+        "subdomain": "medication_safety",
+        "difficulty": "hard",
+        "functional_passed": false,
+        "composite_score": 0.444,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.3,
+        "compliance_score": 0.75,
+        "similarity_score": 0.99,
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp23keni9s.py\", line 47, in <module>\n    assert r is not None\n           ^^^^^^^^^^^^^\nAssertionError"
+      },
+      {
+        "task_id": "health_004",
+        "domain": "healthcare",
+        "subdomain": "ehr_data_processing",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.8331,
+        "domain_coverage": 0.429,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 0.938,
+        "error": null
+      },
+      {
+        "task_id": "health_005",
+        "domain": "healthcare",
+        "subdomain": "hipaa_compliance",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.875,
+        "domain_coverage": 0.667,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_001",
+        "domain": "finance",
+        "subdomain": "risk_management",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.8693,
+        "domain_coverage": 0.429,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_002",
+        "domain": "finance",
+        "subdomain": "portfolio_optimization",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.9335,
+        "domain_coverage": 0.857,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_003",
+        "domain": "finance",
+        "subdomain": "pricing_models",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.9175,
+        "domain_coverage": 0.75,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_004",
+        "domain": "finance",
+        "subdomain": "transaction_processing",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.955,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_005",
+        "domain": "finance",
+        "subdomain": "monte_carlo_simulation",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8736,
+        "domain_coverage": 0.857,
+        "code_quality_score": 0.3,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_001",
+        "domain": "molecular_sim",
+        "subdomain": "molecular_representation",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.885,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.5,
+        "compliance_score": 0.8,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_002",
+        "domain": "molecular_sim",
+        "subdomain": "molecular_properties",
+        "difficulty": "easy",
+        "functional_passed": true,
+        "composite_score": 0.925,
+        "domain_coverage": 0.8,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_003",
+        "domain": "molecular_sim",
+        "subdomain": "force_field_computation",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8784,
+        "domain_coverage": 0.714,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 0.963,
+        "error": null
+      },
+      {
+        "task_id": "mol_004",
+        "domain": "molecular_sim",
+        "subdomain": "drug_likeness",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.925,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_005",
+        "domain": "molecular_sim",
+        "subdomain": "energy_minimization",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8489,
+        "domain_coverage": 0.714,
+        "code_quality_score": 0.3,
+        "compliance_score": 1.0,
+        "similarity_score": 0.968,
+        "error": null
+      },
+      {
+        "task_id": "legal_001",
+        "domain": "legal",
+        "subdomain": "contract_analysis",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.94,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.6,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "legal_002",
+        "domain": "legal",
+        "subdomain": "citation_processing",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.91,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.4,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "legal_003",
+        "domain": "legal",
+        "subdomain": "compliance_checking",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.9026,
+        "domain_coverage": 0.857,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 0.991,
+        "error": null
+      },
+      {
+        "task_id": "legal_004",
+        "domain": "legal",
+        "subdomain": "document_redaction",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.835,
+        "domain_coverage": 0.5,
+        "code_quality_score": 0.4,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "legal_005",
+        "domain": "legal",
+        "subdomain": "risk_assessment",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8607,
+        "domain_coverage": 0.571,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      }
+    ],
+    "CodeLlama-7B": [
+      {
+        "task_id": "health_001",
+        "domain": "healthcare",
+        "subdomain": "FHIR_interoperability",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.8364,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.5,
+        "compliance_score": 0.75,
+        "similarity_score": 0.614,
+        "error": null
+      },
+      {
+        "task_id": "health_002",
+        "domain": "healthcare",
+        "subdomain": "clinical_calculations",
+        "difficulty": "easy",
+        "functional_passed": true,
+        "composite_score": 0.955,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "health_003",
+        "domain": "healthcare",
+        "subdomain": "medication_safety",
+        "difficulty": "hard",
+        "functional_passed": false,
+        "composite_score": 0.4599,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.5,
+        "compliance_score": 0.75,
+        "similarity_score": 0.849,
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp7d9rpyrt.py\", line 39, in <module>\n    assert r is not None\n           ^^^^^^^^^^^^^\nAssertionError"
+      },
+      {
+        "task_id": "health_004",
+        "domain": "healthcare",
+        "subdomain": "ehr_data_processing",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.8226,
+        "domain_coverage": 0.429,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 0.833,
+        "error": null
+      },
+      {
+        "task_id": "health_005",
+        "domain": "healthcare",
+        "subdomain": "hipaa_compliance",
+        "difficulty": "hard",
+        "functional_passed": false,
+        "composite_score": 0.3268,
+        "domain_coverage": 0.5,
+        "code_quality_score": 0.3,
+        "compliance_score": 0.75,
+        "similarity_score": 0.568,
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp2dy7wa7l.py\", line 56, in <module>\n    assert result[\"emergency_contact\"][\"name\"] == \"REDACTED\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+      },
+      {
+        "task_id": "fin_001",
+        "domain": "finance",
+        "subdomain": "risk_management",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.8693,
+        "domain_coverage": 0.429,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_002",
+        "domain": "finance",
+        "subdomain": "portfolio_optimization",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8963,
+        "domain_coverage": 0.857,
+        "code_quality_score": 0.8,
+        "compliance_score": 1.0,
+        "similarity_score": 0.477,
+        "error": null
+      },
+      {
+        "task_id": "fin_003",
+        "domain": "finance",
+        "subdomain": "pricing_models",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.9175,
+        "domain_coverage": 0.75,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_004",
+        "domain": "finance",
+        "subdomain": "transaction_processing",
+        "difficulty": "medium",
+        "functional_passed": false,
+        "composite_score": 0.4254,
+        "domain_coverage": 0.857,
+        "code_quality_score": 0.5,
+        "compliance_score": 0.8,
+        "similarity_score": 0.618,
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpe1drmeil.py\", line 66, in <module>\n    assert False, \"Should be immutable\"\n           ^^^^^\nAssertionError: Should be immutable"
+      },
+      {
+        "task_id": "fin_005",
+        "domain": "finance",
+        "subdomain": "monte_carlo_simulation",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8408,
+        "domain_coverage": 0.714,
+        "code_quality_score": 0.3,
+        "compliance_score": 1.0,
+        "similarity_score": 0.887,
+        "error": null
+      },
+      {
+        "task_id": "mol_001",
+        "domain": "molecular_sim",
+        "subdomain": "molecular_representation",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.885,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.5,
+        "compliance_score": 0.8,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_002",
+        "domain": "molecular_sim",
+        "subdomain": "molecular_properties",
+        "difficulty": "easy",
+        "functional_passed": true,
+        "composite_score": 0.925,
+        "domain_coverage": 0.8,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_003",
+        "domain": "molecular_sim",
+        "subdomain": "force_field_computation",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8154,
+        "domain_coverage": 0.857,
+        "code_quality_score": 0.5,
+        "compliance_score": 0.6,
+        "similarity_score": 0.918,
+        "error": null
+      },
+      {
+        "task_id": "mol_004",
+        "domain": "molecular_sim",
+        "subdomain": "drug_likeness",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.925,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_005",
+        "domain": "molecular_sim",
+        "subdomain": "energy_minimization",
+        "difficulty": "hard",
+        "functional_passed": false,
+        "composite_score": 0.3925,
+        "domain_coverage": 0.714,
+        "code_quality_score": 0.3,
+        "compliance_score": 0.75,
+        "similarity_score": 0.904,
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpdqtmnxft.py\", line 34, in <module>\n    assert result['converged'] == True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+      },
+      {
+        "task_id": "legal_001",
+        "domain": "legal",
+        "subdomain": "contract_analysis",
+        "difficulty": "medium",
+        "functional_passed": false,
+        "composite_score": 0.5369,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.6,
+        "compliance_score": 1.0,
+        "similarity_score": 0.969,
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp3akhlv77.py\", line 119, in <module>\n    assert any(c['type'] == 'termination' for c in result['clauses'])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+      },
+      {
+        "task_id": "legal_002",
+        "domain": "legal",
+        "subdomain": "citation_processing",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.91,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.4,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "legal_003",
+        "domain": "legal",
+        "subdomain": "compliance_checking",
+        "difficulty": "hard",
+        "functional_passed": false,
+        "composite_score": 0.3321,
+        "domain_coverage": 0.571,
+        "code_quality_score": 0.5,
+        "compliance_score": 0.5,
+        "similarity_score": 0.714,
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp81u7vsvs.py\", line 84, in <module>\n    assert r2['risk_level'] == 'high'  # special category data\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+      },
+      {
+        "task_id": "legal_004",
+        "domain": "legal",
+        "subdomain": "document_redaction",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.835,
+        "domain_coverage": 0.5,
+        "code_quality_score": 0.4,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "legal_005",
+        "domain": "legal",
+        "subdomain": "risk_assessment",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8607,
+        "domain_coverage": 0.571,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      }
+    ],
+    "StarCoder2-15B": [
+      {
+        "task_id": "health_001",
+        "domain": "healthcare",
+        "subdomain": "FHIR_interoperability",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.925,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "health_002",
+        "domain": "healthcare",
+        "subdomain": "clinical_calculations",
+        "difficulty": "easy",
+        "functional_passed": true,
+        "composite_score": 0.955,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "health_003",
+        "domain": "healthcare",
+        "subdomain": "medication_safety",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.895,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.3,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "health_004",
+        "domain": "healthcare",
+        "subdomain": "ehr_data_processing",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.8393,
+        "domain_coverage": 0.429,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "health_005",
+        "domain": "healthcare",
+        "subdomain": "hipaa_compliance",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.875,
+        "domain_coverage": 0.667,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_001",
+        "domain": "finance",
+        "subdomain": "risk_management",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.8693,
+        "domain_coverage": 0.429,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_002",
+        "domain": "finance",
+        "subdomain": "portfolio_optimization",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.9335,
+        "domain_coverage": 0.857,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_003",
+        "domain": "finance",
+        "subdomain": "pricing_models",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.9175,
+        "domain_coverage": 0.75,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "fin_004",
+        "domain": "finance",
+        "subdomain": "transaction_processing",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.8527,
+        "domain_coverage": 0.857,
+        "code_quality_score": 0.5,
+        "compliance_score": 0.8,
+        "similarity_score": 0.891,
+        "error": null
+      },
+      {
+        "task_id": "fin_005",
+        "domain": "finance",
+        "subdomain": "monte_carlo_simulation",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8736,
+        "domain_coverage": 0.857,
+        "code_quality_score": 0.3,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_001",
+        "domain": "molecular_sim",
+        "subdomain": "molecular_representation",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.885,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.5,
+        "compliance_score": 0.8,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_002",
+        "domain": "molecular_sim",
+        "subdomain": "molecular_properties",
+        "difficulty": "easy",
+        "functional_passed": true,
+        "composite_score": 0.925,
+        "domain_coverage": 0.8,
+        "code_quality_score": 0.7,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_003",
+        "domain": "molecular_sim",
+        "subdomain": "force_field_computation",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8206,
+        "domain_coverage": 0.857,
+        "code_quality_score": 0.5,
+        "compliance_score": 0.6,
+        "similarity_score": 0.971,
+        "error": null
+      },
+      {
+        "task_id": "mol_004",
+        "domain": "molecular_sim",
+        "subdomain": "drug_likeness",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.925,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "mol_005",
+        "domain": "molecular_sim",
+        "subdomain": "energy_minimization",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8521,
+        "domain_coverage": 0.714,
+        "code_quality_score": 0.3,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "legal_001",
+        "domain": "legal",
+        "subdomain": "contract_analysis",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.94,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.6,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "legal_002",
+        "domain": "legal",
+        "subdomain": "citation_processing",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.91,
+        "domain_coverage": 1.0,
+        "code_quality_score": 0.4,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "legal_003",
+        "domain": "legal",
+        "subdomain": "compliance_checking",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.9022,
+        "domain_coverage": 0.857,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 0.986,
+        "error": null
+      },
+      {
+        "task_id": "legal_004",
+        "domain": "legal",
+        "subdomain": "document_redaction",
+        "difficulty": "medium",
+        "functional_passed": true,
+        "composite_score": 0.835,
+        "domain_coverage": 0.5,
+        "code_quality_score": 0.4,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      },
+      {
+        "task_id": "legal_005",
+        "domain": "legal",
+        "subdomain": "risk_assessment",
+        "difficulty": "hard",
+        "functional_passed": true,
+        "composite_score": 0.8607,
+        "domain_coverage": 0.571,
+        "code_quality_score": 0.5,
+        "compliance_score": 1.0,
+        "similarity_score": 1.0,
+        "error": null
+      }
+    ]
+  },
+  "task_definitions": [
+    {
+      "task_id": "health_001",
+      "domain": "healthcare",
+      "subdomain": "FHIR_interoperability",
+      "difficulty": "medium",
+      "prompt": "Write a Python function `create_fhir_patient(first_name, last_name, birth_date, gender, mrn)` that creates a FHIR R4 Patient resource as a Python dictionary. The resource must include:\n- resourceType set to 'Patient'\n- A unique id (UUID4)\n- An identifier with system 'http://hospital.example.org/mrn' and the provided mrn value\n- name with given and family fields\n- birthDate in YYYY-MM-DD format\n- gender (must be one of: male, female, other, unknown)\n- A meta field with lastUpdated timestamp in ISO 8601 format\nThe function should validate gender input and raise ValueError for invalid values.",
+      "domain_keywords": [
+        "resourceType",
+        "Patient",
+        "identifier",
+        "FHIR",
+        "meta",
+        "uuid",
+        "birthDate"
+      ],
+      "compliance_checks": [
+        "uses_uuid_for_id",
+        "validates_gender_enum",
+        "fhir_compliant_structure",
+        "iso8601_timestamps"
+      ]
+    },
+    {
+      "task_id": "health_002",
+      "domain": "healthcare",
+      "subdomain": "clinical_calculations",
+      "difficulty": "easy",
+      "prompt": "Write a Python function `calculate_bmi(weight_kg, height_m)` that calculates Body Mass Index and returns a dictionary with keys 'bmi' (float rounded to 1 decimal), 'category' (string), and 'risk_level' (string). Categories: Underweight (<18.5), Normal (18.5-24.9), Overweight (25-29.9), Obese Class I (30-34.9), Obese Class II (35-39.9), Obese Class III (>=40). Risk levels: Low (Normal), Moderate (Underweight/Overweight), High (Obese I), Very High (Obese II/III). Validate inputs: weight must be >0 and <=500, height must be >0 and <=3.0. Raise ValueError with descriptive message for invalid inputs.",
+      "domain_keywords": [
+        "bmi",
+        "weight",
+        "height",
+        "obese",
+        "underweight",
+        "risk"
+      ],
+      "compliance_checks": [
+        "input_validation",
+        "clinical_accuracy",
+        "proper_categorization"
+      ]
+    },
+    {
+      "task_id": "health_003",
+      "domain": "healthcare",
+      "subdomain": "medication_safety",
+      "difficulty": "hard",
+      "prompt": "Write a Python class `MedicationInteractionChecker` that checks for drug-drug interactions. The constructor takes a dictionary of known interactions where keys are frozensets of two drug names (lowercase) and values are dicts with 'severity' (str: 'minor','moderate','major','contraindicated') and 'description' (str). Implement methods:\n1. `check_pair(drug_a, drug_b)` -> returns interaction dict or None\n2. `check_regimen(drug_list)` -> returns list of all pairwise interactions found\n3. `is_safe(drug_list, max_severity='moderate')` -> returns True if no interaction exceeds max_severity\nDrug names should be case-insensitive. The severity ordering is: minor < moderate < major < contraindicated.",
+      "domain_keywords": [
+        "interaction",
+        "severity",
+        "medication",
+        "drug",
+        "contraindicated",
+        "combinations"
+      ],
+      "compliance_checks": [
+        "case_insensitive_matching",
+        "severity_ordering",
+        "comprehensive_pairwise_check",
+        "safety_validation"
+      ]
+    },
+    {
+      "task_id": "health_004",
+      "domain": "healthcare",
+      "subdomain": "ehr_data_processing",
+      "difficulty": "medium",
+      "prompt": "Write a Python function `parse_hl7_message(raw_message)` that parses a simplified HL7 v2.x message string. HL7 messages use '\\r' (or '\\n') as segment separators, '|' as field separators, '^' as component separators. The function should return a dictionary where:\n- Keys are segment names (first field of each segment, e.g., 'MSH', 'PID', 'OBX')\n- Values are lists of fields (split by '|'), where each field containing '^' is further split into a list\n- If there are multiple segments of the same type, the value should be a list of segment field-lists\nHandle empty fields gracefully (empty string). Strip whitespace from all values.",
+      "domain_keywords": [
+        "HL7",
+        "segment",
+        "MSH",
+        "PID",
+        "OBX",
+        "field",
+        "component"
+      ],
+      "compliance_checks": [
+        "hl7_structure_parsing",
+        "component_separation",
+        "multi_segment_handling",
+        "whitespace_handling"
+      ]
+    },
+    {
+      "task_id": "health_005",
+      "domain": "healthcare",
+      "subdomain": "hipaa_compliance",
+      "difficulty": "hard",
+      "prompt": "Write a Python function `deidentify_patient_data(record)` that removes or masks HIPAA-defined Protected Health Information (PHI) from a patient record dictionary. The function should:\n1. Mask the following 18 HIPAA identifiers if present as keys (case-insensitive matching):\n   - 'name' -> 'REDACTED'\n   - 'ssn', 'social_security' -> 'XXX-XX-XXXX'\n   - 'phone', 'telephone', 'fax' -> 'XXX-XXX-XXXX'\n   - 'email' -> 'REDACTED@REDACTED.com'\n   - 'address', 'street', 'city', 'zip', 'zip_code' -> 'REDACTED'\n   - 'mrn', 'medical_record_number' -> 'REDACTED'\n   - 'dob', 'date_of_birth', 'birth_date' -> retain only year (e.g., '1990')\n   - 'ip_address' -> '0.0.0.0'\n2. Return a new dictionary (do not modify the original)\n3. Preserve all non-PHI fields unchanged\n4. Handle nested dictionaries recursively",
+      "domain_keywords": [
+        "HIPAA",
+        "PHI",
+        "deidentify",
+        "redact",
+        "protected_health_information",
+        "mask"
+      ],
+      "compliance_checks": [
+        "hipaa_18_identifiers",
+        "recursive_masking",
+        "immutable_input",
+        "date_generalization"
+      ]
+    },
+    {
+      "task_id": "fin_001",
+      "domain": "finance",
+      "subdomain": "risk_management",
+      "difficulty": "medium",
+      "prompt": "Write a Python function `calculate_var(returns, confidence_level=0.95, method='historical')` that calculates Value at Risk (VaR) for a portfolio. Parameters:\n- returns: list of float (daily returns as decimals, e.g., 0.02 for 2%)\n- confidence_level: float (default 0.95)\n- method: 'historical' or 'parametric'\nFor historical VaR, use the percentile method. For parametric VaR, assume normal distribution.\nReturn a dictionary with keys: 'var' (float, positive number representing loss), 'method' (str), 'confidence_level' (float), 'n_observations' (int).\nRaise ValueError if returns is empty or confidence_level not in (0,1).\nUse only the math and statistics standard library modules (no numpy).",
+      "domain_keywords": [
+        "VaR",
+        "confidence",
+        "percentile",
+        "risk",
+        "returns",
+        "portfolio",
+        "normal_distribution"
+      ],
+      "compliance_checks": [
+        "input_validation",
+        "correct_var_formula",
+        "positive_loss_convention",
+        "method_selection"
+      ]
+    },
+    {
+      "task_id": "fin_002",
+      "domain": "finance",
+      "subdomain": "portfolio_optimization",
+      "difficulty": "hard",
+      "prompt": "Write a Python function `optimize_portfolio(expected_returns, cov_matrix, risk_free_rate=0.02)` that finds the Maximum Sharpe Ratio portfolio using a simple grid search approach.\n- expected_returns: list of expected returns for each asset\n- cov_matrix: list of lists (covariance matrix)\n- risk_free_rate: float\nReturn a dictionary with: 'weights' (list of floats summing to 1.0), 'expected_return' (float), 'volatility' (float), 'sharpe_ratio' (float).\nConstraints: all weights >= 0 (long-only), sum to 1.0.\nUse a grid search with step size 0.1 for 2-3 assets, or random sampling (10000 samples) for more.\nUse only standard library (math, random). Raise ValueError if dimensions don't match.",
+      "domain_keywords": [
+        "sharpe",
+        "portfolio",
+        "weights",
+        "covariance",
+        "volatility",
+        "return",
+        "risk_free"
+      ],
+      "compliance_checks": [
+        "long_only_constraint",
+        "weights_sum_to_one",
+        "sharpe_ratio_formula",
+        "dimension_validation"
+      ]
+    },
+    {
+      "task_id": "fin_003",
+      "domain": "finance",
+      "subdomain": "pricing_models",
+      "difficulty": "medium",
+      "prompt": "Write a Python function `black_scholes(S, K, T, r, sigma, option_type='call')` that calculates the Black-Scholes option price. Parameters:\n- S: current stock price\n- K: strike price\n- T: time to expiration in years\n- r: risk-free interest rate (annual)\n- sigma: volatility (annual)\n- option_type: 'call' or 'put'\nReturn a dictionary with: 'price' (float), 'delta' (float), 'd1' (float), 'd2' (float).\nUse the math and statistics standard library. Validate all inputs are positive (except r can be 0+).",
+      "domain_keywords": [
+        "black_scholes",
+        "d1",
+        "d2",
+        "strike",
+        "volatility",
+        "option",
+        "delta",
+        "NormalDist"
+      ],
+      "compliance_checks": [
+        "correct_bs_formula",
+        "put_call_parity",
+        "greeks_computation",
+        "input_validation"
+      ]
+    },
+    {
+      "task_id": "fin_004",
+      "domain": "finance",
+      "subdomain": "transaction_processing",
+      "difficulty": "medium",
+      "prompt": "Write a Python class `AuditableTransaction` that represents a financial transaction with full audit trail. The constructor takes: amount (float), currency (str), sender (str), receiver (str), tx_type (str: 'credit'|'debit'|'transfer'). Implement:\n1. `validate()` -> returns (bool, list_of_errors). Check: amount > 0, currency is 3-letter uppercase, sender != receiver for transfers\n2. `to_ledger_entry()` -> returns dict with 'timestamp', 'tx_id' (UUID), 'amount', 'currency', 'sender', 'receiver', 'type', 'hash'\n3. The 'hash' should be SHA256 of '{tx_id}|{amount}|{currency}|{sender}|{receiver}|{timestamp}'\n4. `__repr__` -> readable string representation\nEach transaction should be immutable after creation (raise AttributeError on attribute modification).",
+      "domain_keywords": [
+        "audit",
+        "ledger",
+        "sha256",
+        "hash",
+        "uuid",
+        "transaction",
+        "immutable"
+      ],
+      "compliance_checks": [
+        "audit_trail",
+        "hash_integrity",
+        "immutability",
+        "input_validation",
+        "iso_timestamp"
+      ]
+    },
+    {
+      "task_id": "fin_005",
+      "domain": "finance",
+      "subdomain": "monte_carlo_simulation",
+      "difficulty": "hard",
+      "prompt": "Write a Python function `monte_carlo_option_price(S0, K, T, r, sigma, n_simulations=10000, n_steps=252, seed=42)` that prices a European call option using Monte Carlo simulation with Geometric Brownian Motion.\n- Use the GBM formula: S(t+dt) = S(t) * exp((r - sigma^2/2)*dt + sigma*sqrt(dt)*Z) where Z ~ N(0,1)\n- Return dict with: 'price' (discounted average payoff), 'std_error' (standard error of price estimate), 'confidence_interval_95' (tuple of lower, upper), 'n_simulations' (int)\n- Use only math, random, and statistics modules\n- Set the random seed for reproducibility",
+      "domain_keywords": [
+        "monte_carlo",
+        "GBM",
+        "simulation",
+        "payoff",
+        "discount",
+        "confidence_interval",
+        "std_error"
+      ],
+      "compliance_checks": [
+        "gbm_formula",
+        "discounting",
+        "confidence_interval",
+        "reproducible_seed",
+        "standard_error"
+      ]
+    },
+    {
+      "task_id": "mol_001",
+      "domain": "molecular_sim",
+      "subdomain": "molecular_representation",
+      "difficulty": "medium",
+      "prompt": "Write a Python function `parse_smiles_basic(smiles)` that performs a simplified parse of a SMILES string. Return a dictionary with:\n- 'atoms': list of atom symbols found (e.g., ['C', 'C', 'O', 'N'])\n- 'bonds': list of tuples (atom_idx1, atom_idx2, bond_type) where bond_type is 'single', 'double', 'triple', or 'aromatic'\n- 'rings': number of ring closures detected (digits in SMILES)\n- 'branches': number of branches (parentheses pairs)\n- 'molecular_formula': dict of atom counts e.g., {'C': 2, 'O': 1}\nHandle: uppercase single atoms (C, N, O, S, P, F), two-letter atoms (Cl, Br), bond symbols (-, =, #), ring digits (0-9), and branches ().\nIgnore: H (implicit), charges, stereochemistry (@), isotopes.",
+      "domain_keywords": [
+        "SMILES",
+        "atoms",
+        "bonds",
+        "ring",
+        "molecular_formula",
+        "aromatic",
+        "branch"
+      ],
+      "compliance_checks": [
+        "smiles_parsing",
+        "atom_recognition",
+        "bond_type_detection",
+        "ring_detection",
+        "formula_computation"
+      ]
+    },
+    {
+      "task_id": "mol_002",
+      "domain": "molecular_sim",
+      "subdomain": "molecular_properties",
+      "difficulty": "easy",
+      "prompt": "Write a Python function `calculate_molecular_weight(formula_str)` that calculates the molecular weight from a molecular formula string (e.g., 'H2O', 'C6H12O6', 'NaCl'). Use these atomic weights:\nH=1.008, He=4.003, Li=6.941, C=12.011, N=14.007, O=15.999, F=18.998, Na=22.990, P=30.974, S=32.065, Cl=35.453, K=39.098, Ca=40.078, Fe=55.845, Br=79.904, I=126.904.\nReturn a dictionary with: 'molecular_weight' (float rounded to 3 decimals), 'composition' (dict of element -> count), 'mass_fractions' (dict of element -> fraction).\nRaise ValueError for unknown elements.",
+      "domain_keywords": [
+        "molecular_weight",
+        "atomic_weight",
+        "formula",
+        "composition",
+        "mass_fraction"
+      ],
+      "compliance_checks": [
+        "correct_weights",
+        "formula_parsing",
+        "mass_fraction_calculation",
+        "unknown_element_handling"
+      ]
+    },
+    {
+      "task_id": "mol_003",
+      "domain": "molecular_sim",
+      "subdomain": "force_field_computation",
+      "difficulty": "hard",
+      "prompt": "Write a Python function `lennard_jones_simulation(positions, epsilon=1.0, sigma=1.0, box_size=10.0, cutoff=2.5)` that computes Lennard-Jones forces and energy for a set of particles in a periodic box.\n- positions: list of [x, y, z] coordinates\n- Returns dict with: 'total_energy' (float), 'forces' (list of [fx,fy,fz] per particle), 'pair_energies' (list of per-pair energies), 'n_pairs_in_cutoff' (int)\n- LJ potential: V(r) = 4*epsilon*((sigma/r)^12 - (sigma/r)^6)\n- LJ force magnitude: F(r) = 24*epsilon*(2*(sigma/r)^12 - (sigma/r)^6)/r\n- Apply minimum image convention for periodic boundaries\n- Only compute interactions within cutoff distance\nUse only math module.",
+      "domain_keywords": [
+        "lennard_jones",
+        "sigma",
+        "epsilon",
+        "periodic",
+        "minimum_image",
+        "cutoff",
+        "force"
+      ],
+      "compliance_checks": [
+        "lj_formula",
+        "periodic_boundary",
+        "minimum_image_convention",
+        "newtons_third_law",
+        "cutoff_applied"
+      ]
+    },
+    {
+      "task_id": "mol_004",
+      "domain": "molecular_sim",
+      "subdomain": "drug_likeness",
+      "difficulty": "medium",
+      "prompt": "Write a Python function `lipinski_rule_of_five(molecule)` that evaluates Lipinski's Rule of Five for drug-likeness. The input is a dictionary with keys: 'molecular_weight' (float), 'logP' (float), 'h_bond_donors' (int), 'h_bond_acceptors' (int), 'rotatable_bonds' (int), 'psa' (float, polar surface area).\nReturn a dictionary with:\n- 'passes_lipinski': bool (True if at most 1 violation of original 4 rules)\n- 'violations': list of strings describing each violation\n- 'n_violations': int\n- 'drug_likeness_score': float (0-1, fraction of rules passed)\n- 'veber_rules': dict with 'passes' (bool), 'details' (str) - Veber: rotatable_bonds <= 10 and PSA <= 140\nRules: MW <= 500, LogP <= 5, HBD <= 5, HBA <= 10.",
+      "domain_keywords": [
+        "lipinski",
+        "drug_likeness",
+        "molecular_weight",
+        "logP",
+        "h_bond",
+        "Veber",
+        "PSA"
+      ],
+      "compliance_checks": [
+        "lipinski_thresholds",
+        "violation_counting",
+        "veber_rules",
+        "score_calculation"
+      ]
+    },
+    {
+      "task_id": "mol_005",
+      "domain": "molecular_sim",
+      "subdomain": "energy_minimization",
+      "difficulty": "hard",
+      "prompt": "Write a Python function `steepest_descent_minimizer(energy_func, grad_func, initial_coords, step_size=0.01, max_steps=1000, convergence=1e-6)` that performs energy minimization using steepest descent with adaptive step size.\n- energy_func(coords) -> float (energy)\n- grad_func(coords) -> list of floats (gradient, same length as coords)\n- initial_coords: list of floats\nReturn dict with: 'final_coords' (list), 'final_energy' (float), 'n_steps' (int), 'converged' (bool), 'energy_trajectory' (list of energies at each step), 'gradient_norm_trajectory' (list of gradient norms).\nAdaptive step: if energy increases, halve the step size; if energy decreases for 5 consecutive steps, increase step by 1.2x. Convergence when gradient norm < convergence threshold.",
+      "domain_keywords": [
+        "minimization",
+        "gradient",
+        "steepest_descent",
+        "convergence",
+        "energy",
+        "step_size",
+        "adaptive"
+      ],
+      "compliance_checks": [
+        "gradient_descent",
+        "adaptive_step_size",
+        "convergence_criterion",
+        "energy_decrease"
+      ]
+    },
+    {
+      "task_id": "legal_001",
+      "domain": "legal",
+      "subdomain": "contract_analysis",
+      "difficulty": "medium",
+      "prompt": "Write a Python function `extract_contract_clauses(contract_text)` that extracts and categorizes clauses from a legal contract text. Return a dictionary with:\n- 'clauses': list of dicts, each with 'number' (str), 'title' (str), 'text' (str), 'type' (str)\n- 'parties': list of party names identified\n- 'effective_date': str or None\n- 'termination_clause': dict or None (with 'notice_period' and 'conditions')\nClause types: 'definition', 'obligation', 'termination', 'liability', 'confidentiality', 'indemnification', 'governing_law', 'general'.\nMatch clause types by keyword presence in title/text. Extract parties from the preamble (lines before first numbered clause). Look for dates in format 'Month Day, Year' or 'YYYY-MM-DD'.",
+      "domain_keywords": [
+        "clause",
+        "contract",
+        "party",
+        "termination",
+        "governing_law",
+        "confidentiality",
+        "obligation"
+      ],
+      "compliance_checks": [
+        "clause_extraction",
+        "party_identification",
+        "date_extraction",
+        "clause_classification"
+      ]
+    },
+    {
+      "task_id": "legal_002",
+      "domain": "legal",
+      "subdomain": "citation_processing",
+      "difficulty": "medium",
+      "prompt": "Write a Python function `parse_legal_citation(citation_str)` that parses legal citations in common US legal citation formats. Support:\n1. Case law: 'Brown v. Board of Education, 347 U.S. 483 (1954)'\n2. Statute: '42 U.S.C. \u00a7 1983'\n3. Regulation: '17 C.F.R. \u00a7 240.10b-5'\nReturn a dictionary with: 'type' ('case'|'statute'|'regulation'|'unknown'), 'volume' (str), 'reporter' (str), 'page_or_section' (str), 'year' (str or None), 'parties' (list for cases), 'full_citation' (original string), 'normalized' (standardized form).",
+      "domain_keywords": [
+        "citation",
+        "case",
+        "statute",
+        "regulation",
+        "reporter",
+        "U.S.C.",
+        "C.F.R.",
+        "section"
+      ],
+      "compliance_checks": [
+        "citation_format_recognition",
+        "party_extraction",
+        "volume_reporter_parsing",
+        "bluebook_compliance"
+      ]
+    },
+    {
+      "task_id": "legal_003",
+      "domain": "legal",
+      "subdomain": "compliance_checking",
+      "difficulty": "hard",
+      "prompt": "Write a Python class `GDPRComplianceChecker` that analyzes data processing activities for GDPR compliance. Constructor takes a list of 'processing_activity' dicts, each with keys:\n- 'name' (str), 'purpose' (str), 'legal_basis' (str), 'data_categories' (list of str),\n- 'data_subjects' (list of str), 'retention_period_days' (int), 'has_consent' (bool),\n- 'has_dpia' (bool), 'cross_border_transfer' (bool), 'encryption' (bool)\nImplement methods:\n1. `check_activity(activity_name)` -> returns dict with 'compliant' (bool), 'issues' (list of str), 'risk_level' (str)\n2. `full_audit()` -> returns dict with 'total_activities', 'compliant_count', 'non_compliant', 'high_risk_activities', 'recommendations'\n3. `generate_record_of_processing()` -> returns list of dicts formatted as GDPR Article 30 records\nRisk levels: 'low', 'medium', 'high'. High risk if: special category data OR cross-border without DPIA OR no legal basis.",
+      "domain_keywords": [
+        "GDPR",
+        "compliance",
+        "consent",
+        "DPIA",
+        "legal_basis",
+        "data_categories",
+        "special_category"
+      ],
+      "compliance_checks": [
+        "gdpr_article_6_legal_basis",
+        "special_category_handling",
+        "dpia_requirement",
+        "article_30_records"
+      ]
+    },
+    {
+      "task_id": "legal_004",
+      "domain": "legal",
+      "subdomain": "document_redaction",
+      "difficulty": "medium",
+      "prompt": "Write a Python function `redact_legal_document(text, redaction_rules)` that redacts sensitive information from legal documents. Parameters:\n- text: the document text\n- redaction_rules: dict with keys being entity types and values being 'mask'|'remove'|'generalize'\n  Supported entity types: 'names', 'dates', 'amounts', 'addresses', 'phone_numbers', 'ssn', 'case_numbers'\nReturn a dict with: 'redacted_text' (str), 'redactions' (list of dicts with 'original', 'replacement', 'type', 'position'), 'n_redactions' (int).\nPatterns: Names (capitalized words following Mr/Mrs/Ms/Dr or two consecutive capitalized words), Dates (MM/DD/YYYY, Month Day Year), Amounts ($X,XXX.XX), Phone (XXX-XXX-XXXX), SSN (XXX-XX-XXXX), Case numbers (XX-XXXX or Case No. XXXX).\nMask: replace with [REDACTED_TYPE], Remove: delete entirely, Generalize: dates->year only, amounts->range.",
+      "domain_keywords": [
+        "redact",
+        "REDACTED",
+        "sensitive",
+        "phi",
+        "pii",
+        "mask",
+        "pattern",
+        "regex"
+      ],
+      "compliance_checks": [
+        "pii_detection",
+        "redaction_modes",
+        "audit_trail_of_redactions",
+        "pattern_coverage"
+      ]
+    },
+    {
+      "task_id": "legal_005",
+      "domain": "legal",
+      "subdomain": "risk_assessment",
+      "difficulty": "hard",
+      "prompt": "Write a Python class `LegalRiskAssessor` that evaluates legal risks in business documents. Constructor takes a list of 'risk_rules' dicts with: 'pattern' (regex str), 'risk_type' (str), 'severity' (1-10), 'description' (str), 'recommendation' (str).\nImplement:\n1. `assess_document(text)` -> returns dict with 'risks' (list of matched risks), 'overall_risk_score' (0-100), 'risk_level' (str: 'low'|'medium'|'high'|'critical'), 'n_risks' (int)\n2. `compare_documents(text1, text2)` -> returns dict comparing risk profiles\n3. `generate_risk_report(text)` -> returns formatted string report\nOverall score: sum of severities * frequency, normalized to 0-100.\nRisk levels: low (0-25), medium (26-50), high (51-75), critical (76-100).",
+      "domain_keywords": [
+        "risk",
+        "liability",
+        "indemnification",
+        "compliance",
+        "severity",
+        "assessment",
+        "recommendation"
+      ],
+      "compliance_checks": [
+        "pattern_matching",
+        "risk_scoring",
+        "document_comparison",
+        "report_generation"
+      ]
+    }
+  ]
+}
