@@ -1,0 +1,230 @@
+{
+  "Qwen2.5-Coder-7B": {
+    "overall": {
+      "pass_rate": 1.0,
+      "avg_composite_score": 0.8977,
+      "avg_domain_coverage": 0.807,
+      "avg_code_quality": 0.525,
+      "avg_compliance": 0.99,
+      "n_tasks": 20
+    },
+    "by_domain": {
+      "healthcare": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.8979,
+        "avg_domain_coverage": 0.819,
+        "avg_compliance": 1.0,
+        "n_tasks": 5
+      },
+      "finance": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.9098,
+        "avg_domain_coverage": 0.779,
+        "avg_compliance": 1.0,
+        "n_tasks": 5
+      },
+      "molecular_sim": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.8934,
+        "avg_domain_coverage": 0.846,
+        "avg_compliance": 0.96,
+        "n_tasks": 5
+      },
+      "legal": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.8898,
+        "avg_domain_coverage": 0.786,
+        "avg_compliance": 1.0,
+        "n_tasks": 5
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.94,
+        "n_tasks": 2
+      },
+      "medium": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.9001,
+        "n_tasks": 10
+      },
+      "hard": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.8842,
+        "n_tasks": 8
+      }
+    }
+  },
+  "Qwen2.5-Coder-3B": {
+    "overall": {
+      "pass_rate": 0.95,
+      "avg_composite_score": 0.8746,
+      "avg_domain_coverage": 0.807,
+      "avg_code_quality": 0.525,
+      "avg_compliance": 0.978,
+      "n_tasks": 20
+    },
+    "by_domain": {
+      "healthcare": {
+        "pass_rate": 0.8,
+        "avg_composite": 0.8064,
+        "avg_domain_coverage": 0.819,
+        "avg_compliance": 0.95,
+        "n_tasks": 5
+      },
+      "finance": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.9098,
+        "avg_domain_coverage": 0.779,
+        "avg_compliance": 1.0,
+        "n_tasks": 5
+      },
+      "molecular_sim": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.8925,
+        "avg_domain_coverage": 0.846,
+        "avg_compliance": 0.96,
+        "n_tasks": 5
+      },
+      "legal": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.8897,
+        "avg_domain_coverage": 0.786,
+        "avg_compliance": 1.0,
+        "n_tasks": 5
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.94,
+        "n_tasks": 2
+      },
+      "medium": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.8995,
+        "n_tasks": 10
+      },
+      "hard": {
+        "pass_rate": 0.875,
+        "avg_composite": 0.8271,
+        "n_tasks": 8
+      }
+    }
+  },
+  "CodeLlama-7B": {
+    "overall": {
+      "pass_rate": 0.7,
+      "avg_composite_score": 0.7384,
+      "avg_domain_coverage": 0.777,
+      "avg_code_quality": 0.52,
+      "avg_compliance": 0.885,
+      "n_tasks": 20
+    },
+    "by_domain": {
+      "healthcare": {
+        "pass_rate": 0.6,
+        "avg_composite": 0.6801,
+        "avg_domain_coverage": 0.786,
+        "avg_compliance": 0.85,
+        "n_tasks": 5
+      },
+      "finance": {
+        "pass_rate": 0.8,
+        "avg_composite": 0.7899,
+        "avg_domain_coverage": 0.721,
+        "avg_compliance": 0.96,
+        "n_tasks": 5
+      },
+      "molecular_sim": {
+        "pass_rate": 0.8,
+        "avg_composite": 0.7886,
+        "avg_domain_coverage": 0.874,
+        "avg_compliance": 0.83,
+        "n_tasks": 5
+      },
+      "legal": {
+        "pass_rate": 0.6,
+        "avg_composite": 0.6949,
+        "avg_domain_coverage": 0.728,
+        "avg_compliance": 0.9,
+        "n_tasks": 5
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.94,
+        "n_tasks": 2
+      },
+      "medium": {
+        "pass_rate": 0.8,
+        "avg_composite": 0.7963,
+        "n_tasks": 10
+      },
+      "hard": {
+        "pass_rate": 0.5,
+        "avg_composite": 0.6156,
+        "n_tasks": 8
+      }
+    }
+  },
+  "StarCoder2-15B": {
+    "overall": {
+      "pass_rate": 1.0,
+      "avg_composite_score": 0.8896,
+      "avg_domain_coverage": 0.807,
+      "avg_code_quality": 0.515,
+      "avg_compliance": 0.96,
+      "n_tasks": 20
+    },
+    "by_domain": {
+      "healthcare": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.8979,
+        "avg_domain_coverage": 0.819,
+        "avg_compliance": 1.0,
+        "n_tasks": 5
+      },
+      "finance": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.8893,
+        "avg_domain_coverage": 0.75,
+        "avg_compliance": 0.96,
+        "n_tasks": 5
+      },
+      "molecular_sim": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.8815,
+        "avg_domain_coverage": 0.874,
+        "avg_compliance": 0.88,
+        "n_tasks": 5
+      },
+      "legal": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.8896,
+        "avg_domain_coverage": 0.786,
+        "avg_compliance": 1.0,
+        "n_tasks": 5
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.94,
+        "n_tasks": 2
+      },
+      "medium": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.8899,
+        "n_tasks": 10
+      },
+      "hard": {
+        "pass_rate": 1.0,
+        "avg_composite": 0.8766,
+        "n_tasks": 8
+      }
+    }
+  }
+}
